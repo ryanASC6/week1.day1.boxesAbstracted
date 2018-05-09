@@ -1,4 +1,5 @@
 const number_of_boxes_in_row = 10;
+const number_of_boxes_in_column = 1;
 
 let box_width, box_height;
 
@@ -37,8 +38,8 @@ function draw(){
         // still take up the whole width of the canvas. If you see 
         // something different, check over what you've done!
 
-        // TASK #7 - At the stop of this script, create a const 
-        // variable "number_of_boxes_in_column" and set it to 10
+        // TASK #7 - At the stop of this script, set the 
+        // variable "number_of_boxes_in_column" to 10
 
         // TASK #8 - Create another for loop under this task that
         // loops through each box in the column, using "j" as the 
@@ -65,7 +66,7 @@ function draw(){
         // TASK #12 - cut and paste the code for drawing the box into the 2nd "for" loop
 
         // Drawing box
-        customFill(i);
+        customFill(i,y);
         rect(x,y,box_width,box_height);
 
         // TASK #13 - At the top of the document change the 
@@ -85,15 +86,9 @@ function draw(){
  * Create grayscale color fill according to position of box and
  * total number of boxes.
  * @param {Number} i position of box in row
- * @param {Number} j position of box in column
+ * @param {Number} y y-coordinate for box in column
  */
-const customFill = function(i){
-    let fill_constant;
-    if (number_of_boxes_in_column){
-        fill_constant = 255/number_of_boxes_in_row/number_of_boxes_in_column;        
-    }else{
-        fill_constant = 255/number_of_boxes_in_row;
-    }
-    const fill_num = fill_constant * i;
-    fill(fill_num);
+const customFill = function(i,y){
+    const j = y/box_height;
+    fill(255/number_of_boxes_in_row * (i+1), 100, 255/number_of_boxes_in_column * (j+1) );
 }
