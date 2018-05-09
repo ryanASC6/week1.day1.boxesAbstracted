@@ -87,7 +87,7 @@ function draw(){
 }
 
 /**
- * Create grayscale color fill according to position of box and
+ * Create color fill according to position of box and
  * total number of boxes.
  * @param {Number} i position of box in row
  * @param {Number} y y-coordinate for box in column
