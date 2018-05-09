@@ -79,6 +79,10 @@ function draw(){
         // canvas to something else (like 1000). The boxes should 
         // still take up the whole height of the canvas. If you see 
         // something different, check over what you've done!
+
+        // EXTRA CREDIT - Replace the code for drawing boxes with your
+        // own code that allows a mouse click on the box to change
+        // the color of that specific box
     }
 }
 
