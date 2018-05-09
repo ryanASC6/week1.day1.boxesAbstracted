@@ -14,14 +14,13 @@ function draw(){
         const x = i*box_width;
         for(let j = 0;j < number_of_boxes_in_column; j++){
             const y = j*box_height;
-            customFill(i,y);
-            rect(x,y,box_width,box_height);
+            drawBoxes();
         }
     }
 }
 
 /**
- * Create grayscale color fill according to position of box and
+ * Create color fill according to position of box and
  * total number of boxes.
  * @param {Number} i position of box in row
  * @param {Number} y y-coordinate for box in column
@@ -29,4 +28,13 @@ function draw(){
 const customFill = function(i,y){
     const j = y/box_height;
     fill(255/number_of_boxes_in_row * (i+1), 100, 255/number_of_boxes_in_column * (j+1) );
+}
+
+const drawBoxes = function(){
+    customFill(i,y);
+    rect(x,y,box_width,box_height);
+}
+
+function mousePressed(){
+
 }
