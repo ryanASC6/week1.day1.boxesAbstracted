@@ -6,7 +6,7 @@ let box_width, box_height;
 function setup(){
     createCanvas(600,600);
     box_height = height;
-    box_width = ___;
+    box_width = width/10;
     // TASK #1 - set the box_width as the width of the canvas
     // divided by the number of boxes in a row.
 }
@@ -14,13 +14,13 @@ function setup(){
 function draw(){
     // TASK #2 - loop through each box in the row by
     // replacing the blank with the correct number/variable
-    for(let i = 0; i < ___ ; i++){
-        const y = ___;
+    for(let i = 0; i < 10; i++){
+        const y = 10;
         // TASK #3 - replace the blank with the y-coordinate for 
         // current box
         // HINT: it will always be the same
 
-        const x = ___;
+        const x = box_width * i;
         // TASK #4 - replace the blank with the x-coordinate for 
         // current box
         // HINT: this changes with each box in the row
